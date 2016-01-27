@@ -63,6 +63,7 @@ GEM
       thor (~> 0.14)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hashie (3.4.3)
     http (1.0.2)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -95,6 +96,16 @@ GEM
     naught (1.1.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    oauth (0.4.7)
+    omniauth (1.3.1)
+      hashie (>= 1.2, < 4)
+      rack (>= 1.0, < 3)
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (1.2.1)
+      json (~> 1.3)
+      omniauth-oauth (~> 1.1)
     pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -184,6 +195,7 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
+  omniauth-twitter
   pg (~> 0.15)
   rails (= 4.2.5)
   sass-rails (~> 5.0)

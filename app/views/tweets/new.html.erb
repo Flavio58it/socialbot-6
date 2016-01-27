@@ -1,0 +1,7 @@
+<%= form_for(@tweet) do |f| %>
+
+  <%= f.label :contents %>
+  <%= f.text_field :contents  %>
+
+  <%= f.submit "Send tweet!" %>
+<% end %>
