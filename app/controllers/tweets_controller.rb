@@ -1,4 +1,3 @@
-require 'byebug'
 class TweetsController < ApplicationController
 
   def new
