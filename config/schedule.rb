@@ -18,10 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 1.minutes do
-  puts "hello worlds"
-end
-
+set :job_template, "/bin/bash -i -c ':job'"
 
 every 5.minutes do
     rake "syndicate:send_tweets"
