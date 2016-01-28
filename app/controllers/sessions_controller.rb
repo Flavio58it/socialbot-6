@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  
+  before_action :redirect_logged_in, only: [:new]
+
   def new
   end
 
@@ -17,6 +18,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out if logged_in?
-    redirect_to root
+    redirect_to root_path
   end
 end
