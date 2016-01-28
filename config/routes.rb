@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'tweets#new'
+  root 'products#index'
   get 'tweets/create'
 
   resources :products, only: [:create, :new, :index]
