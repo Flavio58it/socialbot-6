@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
     def send_tweets
       Product.pending.each do |product|
         $twitter.update(product.tweet_text)
+        $page_graph.put_wall_post(product.tweet_text)
         product.update(completed: true)
       end
     end
