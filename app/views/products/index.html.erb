@@ -1,4 +1,5 @@
 <%= link_to "Send tweets", new_tweet_url %>
+<%= link_to "Syndicate", syndicates_url, { param1: 'value1', param2: 'value2', method: :post } %>
 <%= link_to "New product", new_product_url %>
 <ul>
 
@@ -8,6 +9,7 @@
   <ul>
     <li> Desc: <%= product.description %>  </li>
     <li> Price: <%= product.price %>  </li>
+    <li> Completed: <%= product.completed %> </li>
 </ul>
 <% end %>
 

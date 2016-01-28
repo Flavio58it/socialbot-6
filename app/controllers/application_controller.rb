@@ -4,5 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   class << self
     attr_accessor :twitter
+
+    def send_tweets
+      Product.pending.each do |product|
+        $twitter.update(product.tweet_text)
+        product.update(completed: true)
+      end
+    end
+
   end
 end

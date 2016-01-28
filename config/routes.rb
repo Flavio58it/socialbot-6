@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+
   root 'products#index'
   get 'tweets/create'
-
+  resources :syndicates, only: [:create]
   resources :products, only: [:create, :new, :index]
   resources :tweets, only: [:create, :new]
   # The priority is based upon order of creation: first created -> highest priority.
