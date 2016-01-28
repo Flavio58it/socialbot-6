@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
+gem 'bitly', '~> 0.9.0'
 gem 'haml'
 gem 'bcrypt'
 gem 'omniauth-twitter'
@@ -16,10 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'whenever', '~> 0.9.4', :require => false
 gem "koala", "~> 2.2"
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 gem 'twitter'
 gem 'figaro'
 # Use jquery as the JavaScript library
