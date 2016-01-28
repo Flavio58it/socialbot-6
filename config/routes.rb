@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'products#index'
+  root 'sessions#new'
   get 'tweets/create'
+  resource :session, only: [:create, :destroy, :new]
+
   resources :syndicates, only: [:create]
   resources :products, only: [:create, :new, :index]
   resources :tweets, only: [:create, :new]

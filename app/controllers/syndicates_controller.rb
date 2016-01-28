@@ -1,7 +1,7 @@
 class SyndicatesController < ApplicationController
   def create
-    ApplicationController.send_tweets
-    flash[:notice] = "Syndicated"
+    ApplicationController.publish
+    flash[:notice] = "Published"
     redirect_to root_path
   end
 end
