@@ -5,7 +5,7 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
+set :output, "/var/log/cron_log.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -18,7 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-set :job_template, "/bin/bash -i -c ':job'"
+# set :job_template, "/bin/bash -i -c ':job'"
 
 every 5.minutes do
     rake "syndicate:send_tweets"
