@@ -12,7 +12,6 @@ class Product < ActiveRecord::Base
 
   def tweet_text
     text = "#{url}. #{name} for $#{price}. #{description}"
-    debugger
     text.tweets({delimeter: "...(more)"})
   end
 
