@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
         end
         $page_graph.put_wall_post(product.publish_text)
         $tumblr.text("syndicater-jzeng.tumblr.com", title: product.name, body: product.publish_text)
-        product.update(completed: true)
+        product.update(published: true)
       end
     end
 

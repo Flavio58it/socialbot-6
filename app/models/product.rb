@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   validates :price, presence: true
 
   def self.pending
-    Product.where(completed: false)
+    Product.where(published: false)
   end
 
   def publish_text

@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
   root 'sessions#new'
-  get 'tweets/create'
+
   resource :session, only: [:create, :destroy, :new]
 
   resources :syndicates, only: [:create]
   resources :products, only: [:create, :new, :index]
-  resources :tweets, only: [:create, :new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
