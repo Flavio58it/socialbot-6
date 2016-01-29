@@ -6,6 +6,17 @@ class Product < ActiveRecord::Base
     Product.where(published: false)
   end
 
+  def self.publish
+    Product.pending.each do |product|
+      product.tweet_text.each do |tweet_chunk|
+        $twitter.update(tweet_chunk[0..-2])
+      end
+      $page_graph.put_wall_post(product.publish_text)
+      $tumblr.text("syndicater-jzeng.tumblr.com", title: product.name, body: product.publish_text)
+      product.update(published: true)
+    end
+  end
+
   def publish_text
     "#{url}. #{name} for $#{price}. #{description}"
   end

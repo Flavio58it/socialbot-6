@@ -5,7 +5,7 @@ class SyndicatesController < ApplicationController
     if Product.pending.empty?
       flash[:danger] = "All products already published"
     else
-      ApplicationController.publish
+      Product.publish
       flash[:success] = "Successfully published"
     end
       redirect_to root_path
