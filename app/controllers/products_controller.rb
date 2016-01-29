@@ -26,6 +26,8 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
+      @product.update(published: false)
+      flash[:success] = "Updated product"
       redirect_to products_url
     else
       flash.now[:danger] = "Error updating product"
@@ -36,7 +38,7 @@ class ProductsController < ApplicationController
   def destroy
     product = Product.find(params[:id])
     product.destroy
-    flash[:success] = "Successfully removed product"
+    flash[:success] = "Removed product"
     redirect_to products_url
   end
 
