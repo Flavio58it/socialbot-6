@@ -19,6 +19,7 @@ that have not been published yet
 ## Pages published to
 * [Twitter account](https://twitter.com/jamesmoney12312)
 * [Facebook page](https://www.facebook.com/syndicaterjzeng123)
+* [Tumblr blog](http://syndicater-jzeng.tumblr.com)
 
 ## Assumptions
 * Assume that tweets are made from one main social media account which can be hard coded.

@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 user = User.create(
-  email: "jzengg@gmail.com",
-  password: "pulsd-syndicater",
-  password_confirmation: "pulsd-syndicater"
+  email: ENV['DEMO_EMAIL'],
+  password: ENV['DEMO_PASSWORD'],
+  password_confirmation: ENV['DEMO_PASSWORD']
 )
