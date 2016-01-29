@@ -1,6 +1,4 @@
 class Product < ActiveRecord::Base
-  include ActionView::Helpers::TextHelper
-
   validates :name, presence: true
   validates :price, presence: true
 
@@ -8,9 +6,14 @@ class Product < ActiveRecord::Base
     Product.where(completed: false)
   end
 
+  def publish_text
+    "#{url}. #{name} for $#{price}. #{description}"
+  end
+
   def tweet_text
     text = "#{url}. #{name} for $#{price}. #{description}"
-    text.truncate(140)
+    debugger
+    text.tweets({delimeter: "...(more)"})
   end
 
   def url=(url)

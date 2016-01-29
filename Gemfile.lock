@@ -48,6 +48,7 @@ GEM
     buftok (0.2.0)
     builder (3.2.2)
     byebug (8.2.1)
+    chopper (0.0.2)
     chronic (0.10.2)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -229,6 +230,7 @@ DEPENDENCIES
   bcrypt
   bitly (~> 0.9.0)
   byebug
+  chopper
   figaro
   haml
   jbuilder (~> 2.0)
