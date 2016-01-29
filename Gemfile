@@ -7,6 +7,7 @@ gem 'bitly', '~> 0.9.0'
 gem 'haml'
 gem 'bcrypt'
 gem 'omniauth-twitter'
+gem 'bootstrap-sass',       '3.2.0.0'
 gem 'chopper'
 # Use postgresql as the database for Active Record
 gem 'tumblr_client'

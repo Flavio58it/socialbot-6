@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     def publish
       Product.pending.each do |product|
         product.tweet_text.each do |tweet_chunk|
-          $twitter.update(tweet_chunk)
+          $twitter.update(tweet_chunk[0..-2])
         end
         $page_graph.put_wall_post(product.publish_text)
         $tumblr.text("syndicater-jzeng.tumblr.com", title: product.name, body: product.publish_text)
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     if !logged_in?
-      flash[:notice] = "You must be logged in to do that"
+      flash[:danger] = "You must be logged in to do that"
       redirect_to root_url
     end
   end

@@ -9,19 +9,12 @@
 <body>
 
 
-<div>
-  <% if logged_in? %>
-    <h3> Logged in as: <%= current_user.email %> </h3>
-    <%= link_to "Log out", session_path, method: "delete" %>
+<%= render 'layouts/header' %>
+  <div class="container">
+    <%= render 'layouts/notification' %>
+    <%= yield %>
 
-  <% end %>
-  <% if flash.any? %>
-    <% flash.each do |type, message| %>
-    <%= message %>
-    <% end %>
-  <% end %>
-</div>
-<%= yield %>
+  </div>
 
 </body>
 </html>
