@@ -13,7 +13,7 @@ Automated way to publish product information to various social media sources.
 account, Tumblr blog via API
 * Keeps track of published and unpublished products. Will only publish products
 that have not been published yet
-* Rake task (lib/tasks/scheduler.rb) to automate publishing at set intervals using Heroku scheduler.
+* Rake task (lib/tasks/scheduler.rake) to automate publishing at set intervals using Heroku scheduler.
 
 ## Pages published to
 * [Twitter account](https://twitter.com/jamesmoney12312)
