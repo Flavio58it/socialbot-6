@@ -8,6 +8,7 @@ gem 'haml'
 gem 'bcrypt'
 gem 'omniauth-twitter'
 # Use postgresql as the database for Active Record
+gem 'tumblr_client'
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
