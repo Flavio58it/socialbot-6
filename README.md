@@ -13,9 +13,7 @@ Automated way to publish product information to various social media sources.
 account, Tumblr blog via API
 * Keeps track of published and unpublished products. Will only publish products
 that have not been published yet
-* Rake task to automate publishing at set intervals if desired
-
-
+* Rake task (lib/tasks/scheduler.rb) to automate publishing at set intervals using Heroku scheduler.
 
 ## Pages published to
 * [Twitter account](https://twitter.com/jamesmoney12312)
@@ -24,8 +22,7 @@ that have not been published yet
 
 ## Assumptions
 * Assume that posts are made from one main social media account for each site which can be hard coded.
-* Assume we want to hang on to products in the database for a certain amount of time.
-We can run a rake task to delete old products if necessary.
+* Assume we want to hang on to products in the database for a certain amount of time. We can periodically run a rake task to delete old products if necessary.
 
 # Resources
 * [Permanent access token for FB page](http://stackoverflow.com/questions/17197970/facebook-permanent-page-access-token)
