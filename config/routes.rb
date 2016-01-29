@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resource :session, only: [:create, :destroy, :new]
 
   resources :syndicates, only: [:create]
-  resources :products, only: [:create, :new, :index]
+  resources :products
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
