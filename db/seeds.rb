@@ -11,3 +11,19 @@ user = User.create(
   password: ENV['DEMO_PASSWORD'],
   password_confirmation: ENV['DEMO_PASSWORD']
 )
+
+products = Product.create([
+  {
+    name: "An example product",
+    description: "Shows you what products look like",
+    price: 1,
+    url: 'www.google.com'
+  },
+  {
+    name: "Food and wine education class",
+    description: "One food and wine education class of your choice at New York Vintners (a $75 value)",
+    price: 35,
+    url: 'https://pulsd.com/new-york/promotions/35-dollars-for-one-wine-and-food-education-class-of-your-choice-at-new-york-vintners-a-75-dollars-value?inviter_id=342171'
+  }
+  ]
+)

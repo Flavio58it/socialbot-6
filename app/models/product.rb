@@ -16,7 +16,7 @@ class Product < ActiveRecord::Base
   end
 
   def url=(url)
-    url = 'http://' + url unless url.include?('http://')
+    url = 'http://' + url unless url.include?('http://') || url.include?('https://')
     shortened_url = self.url || Publisher.new.bitly.shorten(url).short_url
     super(shortened_url)
   end
