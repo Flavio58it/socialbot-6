@@ -14,9 +14,9 @@
               Places published <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Twitter", 'http://www.twitter.com/jamesmoney12312' %></li>
-              <li><%= link_to "Facebook", 'http://www.facebook.com/syndicaterjzeng123' %></li>
-              <li><%= link_to "Tumblr", 'http://syndicater-jzeng.tumblr.com' %></li>
+              <li><%= link_to "Twitter", 'http://www.twitter.com/jamesmoney12312', target: "_blank" %></li>
+              <li><%= link_to "Facebook", 'http://www.facebook.com/syndicaterjzeng123', target: "_blank" %></li>
+              <li><%= link_to "Tumblr", 'http://syndicater-jzeng.tumblr.com', target: "_blank" %></li>
 
             </ul>
           </li>
@@ -24,7 +24,7 @@
 
 </ul>
 <% else %>
-  <p class="navbar-text"> Please login </p>
+  <p class="navbar-text"> Guest login -> email: 'guest@email.com', password: 'password' </p>
 <% end %>
 </div>
 </div>

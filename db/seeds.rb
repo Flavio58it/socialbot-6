@@ -12,6 +12,12 @@ user = User.create(
   password_confirmation: ENV['DEMO_PASSWORD']
 )
 
+guest = User.create(
+  email: "guest@email.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
 products = Product.create([
   {
     name: "An example product",
