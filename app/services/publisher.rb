@@ -35,8 +35,12 @@ class Publisher
 
   def publish
     Product.pending.each do |product|
+      begin
       product.tweet_text.each do |tweet_chunk|
         @twitter.update(tweet_chunk[0..-2])
+      end
+      rescue Exception => e
+        next
       end
       @facebook.put_wall_post(product.publish_text)
       @tumblr.text("syndicater-jzeng.tumblr.com", title: product.name, body: product.publish_text)
