@@ -36,8 +36,8 @@ class Publisher
   def publish
     Product.pending.each do |product|
       begin
-      product.tweet_text.each do |tweet_chunk|
-        @twitter.update(tweet_chunk[0..-2])
+        product.tweet_text.each do |tweet_chunk|
+        @twitter.update(tweet_chunk)
       end
       rescue Exception => e
         next

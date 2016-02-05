@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :require_login
-  # only allow people to edit if product has not been published yet.
+  before_action :require_unpublished, only: [:update, :edit]
 
   def new
     @product = Product.new
@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      @product.update(published: false)
+      # @product.update(published: false)
       flash[:success] = "Updated product"
       redirect_to products_url
     else
@@ -47,5 +47,13 @@ class ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit(:name, :description, :price, :url)
+  end
+
+  def require_unpublished
+    product = Product.find(params[:id])
+    if product.published
+      flash[:danger] = "Cannot edit a product that has already been published"
+      redirect_to products_url
+    end
   end
 end
