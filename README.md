@@ -1,5 +1,5 @@
 # SocialBot
-[Live](http://syndicater-jzeng.herokuapp.com)
+[Live](http://www.socialbot.xyz)
 
 Automated way to publish product information to various social media sources.
 
