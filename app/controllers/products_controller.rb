@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :require_login
+  # only allow people to edit if product has not been published yet.
 
   def new
     @product = Product.new
@@ -31,6 +32,7 @@ class ProductsController < ApplicationController
       redirect_to products_url
     else
       flash.now[:danger] = "Error updating product"
+      # can show product errors for better message
       render :edit
     end
   end

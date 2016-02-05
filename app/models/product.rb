@@ -12,7 +12,7 @@ class Product < ActiveRecord::Base
 
   def tweet_text
     text = "#{url}. #{name} for $#{price}. #{description}"
-    text.tweets({delimeter: "...(more)"})
+    text.tweets({ delimeter: "...(more)" })
   end
 
   def url=(url)

@@ -21,5 +21,5 @@ set :output, "/var/log/cron_log.log"
 # set :job_template, "/bin/bash -i -c ':job'"
 
 every 5.minutes do
-    rake "syndicate:send_tweets"
+    rake "syndicate:publish"
 end
