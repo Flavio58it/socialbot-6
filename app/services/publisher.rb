@@ -36,10 +36,11 @@ class Publisher
   def publish
     Product.pending.each do |product|
       begin
-        product.tweet_text.each do |tweet_chunk|
+      product.tweet_text.each do |tweet_chunk|
         @twitter.update(tweet_chunk)
       end
-      rescue Exception => e
+
+      rescue Twitter::Error => e
         next
       end
       @facebook.put_wall_post(product.publish_text)

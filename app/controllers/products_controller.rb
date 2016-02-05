@@ -27,7 +27,6 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      # @product.update(published: false)
       flash[:success] = "Updated product"
       redirect_to products_url
     else
