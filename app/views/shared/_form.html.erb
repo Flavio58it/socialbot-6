@@ -14,7 +14,7 @@
   <%= f.label :price %>
   <%= f.number_field :price, class: "form-control", value: product.price %>
 
-  <%= f.submit button_text, class: "btn btn-primary", disable_with: "Creating..." %>
+  <%= f.submit button_text, class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
 <% end %>
 
 </div>

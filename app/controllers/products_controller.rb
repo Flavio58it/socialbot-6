@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :require_login
-  before_action :require_unpublished, only: [:update, :edit]
+  before_action :require_unpublished, only: [:update]
 
   def new
     @product = Product.new
