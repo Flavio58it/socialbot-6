@@ -41,6 +41,7 @@ class Publisher
       end
 
       rescue Twitter::Error => e
+        debugger
         next
       end
       @facebook.put_wall_post(product.publish_text)
