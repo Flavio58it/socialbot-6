@@ -36,7 +36,6 @@ class Publisher
   def publish
     Product.pending.each do |product|
       begin
-        debugger
       product.tweet_text.each do |tweet_chunk|
         @twitter.update(tweet_chunk)
       end
